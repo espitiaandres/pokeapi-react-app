@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react'; //parameters in { useState, useEffect } are called "hooks"
+import React, { useState, useEffect } from 'react'; 
 import PokemonList from './PokemonList';
-import axios from 'axios'; //axios lets you call apis much easier than the built-in fetch funciton in React.js
+import axios from 'axios';
 import Pagination from './Pagination';
 
 function App() {
-  const [pokemon, setPokemon] = useState([]) //this can't be empty, must have at least an empty array...
+  const [pokemon, setPokemon] = useState([])
   const [currentPageUrl, setCurrentPageUrl] = useState("https://pokeapi.co/api/v2/pokemon")  
   const [nextPageUrl, setNextPageUrl] = useState()  
   const [previousPageUrl, setPreviousPageUrl] = useState()
@@ -13,7 +13,7 @@ function App() {
   const [fullPokemonUrl] = useState("https://pokeapi.co/api/v2/pokemon?offset=0&limit=965")
 
   useEffect(() => {
-    setLoading(true) //sets the loading variable to true when first starting to load the app
+    setLoading(true)
     let cancel
     axios.get(currentPageUrl, {
       cancelToken: new axios.CancelToken(c => cancel = c)
@@ -43,7 +43,7 @@ function App() {
   if (loading) return "Loading..."
 
   return (
-    <> {/* The empty <> is just an empty object that wraps the items you want to return, kinda like a react fragment */}
+    <> 
       <PokemonList pokemon={pokemon} fullPokemon={fullPokemon}/>  
       <Pagination
       gotoNextPage={nextPageUrl ? gotoNextPage : null} //ternary operator
