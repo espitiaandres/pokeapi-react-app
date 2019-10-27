@@ -7,7 +7,8 @@ Used pokeapi.co and create-react-app to map out all pokemon. Here are some scree
 
 
 <br/>
-...and after the first 20 are displayed...<br/>
+...and after the first 20 are displayed...
+<br/>
 
 
 
