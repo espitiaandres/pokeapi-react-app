@@ -13,4 +13,7 @@ Used pokeapi.co and create-react-app to map out all pokemon. Here are some scree
 
 
 
-![](screenshot2.PNG)
+![](screenshot2.PNG)  
+
+
+...and so on!
